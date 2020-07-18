@@ -4,13 +4,48 @@
   padding: 3rem var(--contentSpacingRight) 0 var(--contentSpacingLeft);
 }
 
+.page h1,
+.page h2,
+.page h3,
+.page h4 {
+  padding-left: 25px;
+  position: relative;
+  left: -25px;
+}
+
+[id] {
+  scroll-margin-top: calc(var(--headerHeight) + 1rem);
+}
+
+.header-anchor {
+  --fullOpacity: 0.35;
+
+  opacity: 0;
+  transition: opacity 50ms ease-out;
+}
+
+@media (hover: none) {
+  .header-anchor {
+    opacity: var(--fullOpacity);
+  }
+}
+
+@media (hover: hover) {
+  .page h1:hover .header-anchor,
+  .page h2:hover .header-anchor,
+  .page h3:hover .header-anchor,
+  .page h4:hover .header-anchor {
+    opacity: var(--fullOpacity);
+  }
+}
+
 .page-wide {
   max-width: 980px;
 }
 
 .page h1 {
   font-weight: 900;
-  margin: 0;
+  margin: 0 0 1rem;
 }
 
 .page h4 {
@@ -27,6 +62,35 @@
 
 .page ul li {
   line-height: 1.65;
+}
+
+.page figure {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.page figcaption {
+  text-align: center;
+  font-style: italic;
+  opacity: 0.75;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  max-width: 80%;
+  margin: 0.5rem auto 0;
+}
+
+.page picture,
+.page img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  border-radius: 3px;
+}
+
+.page img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
 }
 
 .page code {
@@ -65,6 +129,25 @@ a {
   color: var(--primaryBlue);
 }
 
+.page h1 a,
+.page h2 a,
+.page h3 a,
+.page h4 a {
+  text-decoration: none;
+  color: white;
+}
+
+.lightMode .page h1 a,
+.lightMode .page h2 a,
+.lightMode .page h3 a,
+.lightMode .page h4 a {
+  color: black;
+}
+
+.page li a {
+  text-decoration: none;
+}
+
 .page table {
   width: 100%;
 }
@@ -93,5 +176,9 @@ a {
 @media (max-width: 551px) {
   .page {
     padding-top: 1.5rem;
+  }
+
+  .page figcaption {
+    max-width: none;
   }
 }

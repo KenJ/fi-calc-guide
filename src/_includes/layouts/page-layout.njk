@@ -20,16 +20,24 @@
       <link rel="preload" href="{{ '/css/katex.0.11.1.css' | url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
       <noscript><link rel="stylesheet" href="{{ '/css/katex.0.11.1.css' | url }}"></noscript>
     {% endif %}
-    <link rel="stylesheet" href="{{ '/css/app.css' | url }}" />
+    <link rel="stylesheet" href="{{ styles.appCssFilename }}" />
     <title>
       {% if title %}{{ title }} - {% endif %}FI Calc
     </title>
   </head>
   <body>
+    {% if search %}
+      <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.0.4"></script>
+    {% endif %}
     {% set js %}
       {% include "js/color-mode.js" %}
       {% if home !== true %}
         {% include "js/nav-scroll-position.js" %}
+        {% include "js/expandable.js" %}
+        {% include "js/nav-expandable.js" %}
+      {% endif %}
+      {% if search %}
+        {% include "js/search.js" %}
       {% endif %}
     {% endset %}
     <div class="website-root">
@@ -48,6 +56,7 @@
         </div>
       </div>
     </div>
-    <script>{{ js | jsmin | safe }}</script>
+    <script>{{ js | babel | jsmin | safe }}</script>
+    <script async src="https://unpkg.com/body-scroll-lock@3.0.3/lib/bodyScrollLock.min.js"></script>
   </body>
 </html>

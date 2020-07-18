@@ -11,6 +11,11 @@ best to make a reasonable guess.
 
 ### Choosing a Retirement Length
 
+<figure>
+    <img width="255px" src="/images/configuration-number-of-years.jpg" alt="The length of retirement input field.">
+    <figcaption>Change your retirement length using this field within the Configuration.</figcaption>
+</figure>
+
 The default value, 30 years, comes from the papers that derived the 4% Rule.
 Although these studies considered a variety of different retirement lengths
 (ranging from 15 to 50 years), many people reference the success rates of the 30
@@ -39,4 +44,11 @@ that are, say, 140 years long. As of 2020, 140 year long retirements only runs
 The results of FI Calc are more useful with more simulations. For this reason,
 we don't recommend that you specify extremely long retirement lengths.
 
-> FI Calc will warn you when an extremely low number of simulations are run.
+<figure>
+    <picture>
+      <source media="(max-width: 550px)" srcset="/images/configuration-too-few-sims-warning-612.jpg 612w" sizes="306px">
+      <source media="(min-width: 551px)" srcset="/images/configuration-too-few-sims-warning-982.jpg 982w" sizes="491px">
+      <img src="/images/configuration-number-of-years.jpg" alt="The warning that is displayed when too few simulations are run.">
+    </picture>
+    <figcaption>FI Calc will warn you when an exceptionally low number of simulations are run.</figcaption>
+</figure>

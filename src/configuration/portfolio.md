@@ -13,10 +13,19 @@ retirement.
 Presently, FI Calc supports entering three kinds of assets: equities, bonds, and
 cash.
 
+> Do you own real estate? Create
+> [Additional Income](/configuration/additional-income/) to factor in earnings
+> from your investment properties.
+
 You're also able to specify whether you intend to rebalance your portfolio or
 not, and also if your allocation mix should change over time (a "glide path").
 
 ## Deciding on a Portfolio Value
+
+<figure>
+    <img width="256px" src="/images/configuration-portfolio-value.jpg" alt="The portfolio value input field.">
+    <figcaption>Enter the value of your portfolio at the start of your retirement into this field.</figcaption>
+</figure>
 
 If you're not sure how much to enter, begin by running simulations with the
 default value, \$1,000,000. Experiment with the different withdrawal strategies
@@ -26,6 +35,11 @@ value that feels right for you.
 
 ## Entering Asset Types
 
+<figure>
+    <img width="256px" src="/images/configuration-asset-allocation.jpg" alt="The asset allocation summary button. Click this to choose your asset allocation.">
+    <figcaption>Click or tap on the asset allocation summary to change your portfolio's asset allocation.</figcaption>
+</figure>
+
 ### Equities
 
 There is a single input field for how much of your portfolio is stocks. If you
@@ -34,6 +48,11 @@ values together to determine the percent of your portfolio that number is.
 
 Additionally, you can also specify the annual fees, or expense ratio, for your
 stocks. Once again, we recommend inputting the average fees of your investments.
+
+<figure>
+    <img width="285px" src="/images/configuration-equities.jpg" alt="The equities form.">
+    <figcaption>Specify the sum of your equities in this form within Portfolio Details.</figcaption>
+</figure>
 
 The default expense ratio, 0.04%, was the expense ratio of
 [VTSAX](https://investor.vanguard.com/mutual-funds/profile/VTSAX) in May 2020.
@@ -46,6 +65,11 @@ value here.
 
 You may also specify the annual fees, or expense ratios, for your bonds.
 
+<figure>
+    <img width="287px" src="/images/configuration-bonds.jpg" alt="The bonds form.">
+    <figcaption>Specify the sum of your bonds in this form within Portfolio Details.</figcaption>
+</figure>
+
 The default expense ratio, 0.05%, was the expense ratio of
 [VBTLX](https://investor.vanguard.com/mutual-funds/profile/VBTLX) in May 2020.
 
@@ -57,6 +81,11 @@ One important thing to note is that unlike the other asset types, cash is not
 calculated using historical data. Instead, a fixed growth is used for cash,
 which defaults to 1.5%. This growth represents the interest earned in a
 high-interest savings account, for example.
+
+<figure>
+    <img width="290px" src="/images/configuration-cash.jpg" alt="The cash form.">
+    <figcaption>Specify the sum of your cash in this form within Portfolio Details.</figcaption>
+</figure>
 
 ### Real Estate
 
@@ -80,6 +109,11 @@ FI Calc rebalances annually by default, but you can rebalance at any frequency.
 For example, to rebalance every other year, enter `2` as the frequency of
 rebalancing.
 
+<figure>
+    <img width="311px" src="/images/configuration-rebalance.jpg" alt="The rebalance portfolio input.">
+    <figcaption>Configure the rebalancing of your portfolio using this section of Portfolio Details.</figcaption>
+</figure>
+
 ### Disabling Rebalancing
 
 To disable rebalancing altogether uncheck the "Rebalance portfolio" checkbox.
@@ -99,6 +133,11 @@ window, you will find a checkbox called "Change allocations over time." After
 checking it, new inputs will appear for the final portfolio allocations that you
 wish to have.
 
+<figure>
+    <img width="316px" src="/images/configuration-glide-path.jpg" alt="The checkbox used to enable the glide path.">
+    <figcaption>Enable this option in the Portfolio Details dialog to configure a glide path.</figcaption>
+</figure>
+
 > Keep in mind that the sum of your initial and final asset allocations must
 > each add up to 100%.
 
@@ -115,3 +154,12 @@ settle on their final values. There are three options to choose from:
 
 - **quickly**: your allocations more quickly settle on their final values.
   Mathematically, this is Penner's Quadratic Out function.
+
+<figure>
+    <picture>
+      <source media="(max-width: 550px)" srcset="/images/configuration-glide-path-quickly-628.jpg 628w" sizes="314px">
+      <source media="(min-width: 551px)" srcset="/images/configuration-glide-path-quickly-1198.jpg 1198w" sizes="599px">
+      <img src="/images/configuration-glide-path-quickly-1198.jpg" alt="The 'quickly' glide path configuration.">
+    </picture>
+    <figcaption>The "quickly" glide path configuration.</figcaption>
+</figure>
